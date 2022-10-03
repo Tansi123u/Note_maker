@@ -3,6 +3,7 @@ package com.entities;
 import java.util.Date;
 import java.util.Random;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class Note {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String title;
+	@Column(length=2000)
 	private String content;
 	private Date newDate;
 	public int getId() {
